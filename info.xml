@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<extension key="au.com.agileware.importcontactsubtype" type="module">
+    <file>importcontactsubtype</file>
+    <name>Import Contact Subtype</name>
+    <description>Provides feature to append multiple Contact Subtypes for a Contact when providing CSV text in the
+        format of either a) Contact ID, Contact Subtypes b) Contact External ID, Contact Subtypes.
+    </description>
+    <license>AGPL-3.0</license>
+    <maintainer>
+        <author>Agileware</author>
+        <email>support@agileware.com.au</email>
+    </maintainer>
+    <urls>
+        <url desc="Main Extension Page">https://github.com/agileware/au.com.agileware.importcontactsubtype</url>
+        <url desc="Documentation">https://github.com/agileware/au.com.agileware.importcontactsubtype/README.md</url>
+        <url desc="Support">https://agileware.com.au/contact</url>
+        <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+    </urls>
+    <releaseDate>2022-04-19</releaseDate>
+    <version>1.0</version>
+    <develStage>beta</develStage>
+    <compatibility>
+        <ver>5.0</ver>
+    </compatibility>
+    <comments></comments>
+    <classloader>
+        <psr4 prefix="Civi\" path="Civi"/>
+    </classloader>
+    <civix>
+        <namespace>CRM/Importcontactsubtype</namespace>
+    </civix>
+</extension>

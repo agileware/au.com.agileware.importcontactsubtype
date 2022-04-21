@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+    <item>
+        <path>civicrm/admin/setting/importcontactsubtype</path>
+        <title>Import Contact Subtype Settings</title>
+        <page_callback>CRM_Importcontactsubtype_Form_Settings</page_callback>
+        <access_arguments>administer CiviCRM</access_arguments>
+    </item>
+</menu>
