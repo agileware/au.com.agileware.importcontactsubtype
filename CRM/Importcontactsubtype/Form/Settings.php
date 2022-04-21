@@ -71,6 +71,7 @@ class CRM_Importcontactsubtype_Form_Settings extends CRM_Core_Form {
   public function importCSV($csv, $identifier = 'id') {
     $import_rows      = explode("\r\n", $csv);
     $contacts_updated = 0;
+    $contactsubtypes = [];
     foreach ($import_rows as $import_row) {
       $row = explode(',', $import_row);
 
@@ -95,6 +96,10 @@ class CRM_Importcontactsubtype_Form_Settings extends CRM_Core_Form {
             if (isset($existing_contactsubtypes)) {
               $contactsubtypes = array_unique(array_merge($existing_contactsubtypes, $contactsubtypes));
             }
+
+            // Remove any empty array values
+            $contactsubtypes = array_filter($contactsubtypes, 'strlen');
+
             // Update the Contact Type for the Contact
             try {
               \Civi\Api4\Contact::update()
