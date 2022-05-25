@@ -1,5 +1,6 @@
 <?php
 
+use Civi\Api4\Contact;
 use CRM_Importcontactsubtype_ExtensionUtil as E;
 
 /**
@@ -77,7 +78,7 @@ class CRM_Importcontactsubtype_Form_Settings extends CRM_Core_Form {
 
       if (!empty($row[0])) {
         // Load the existing Contact and any existing Contact Subtypes so they are not overwritten
-        $results = \Civi\Api4\Contact::get()
+        $results = Contact::get()
                                      ->addSelect('contact_sub_type')
                                      ->addWhere($identifier, '=', $row[0])
                                      ->addWhere('contact_type', '=', 'Individual')
@@ -102,7 +103,7 @@ class CRM_Importcontactsubtype_Form_Settings extends CRM_Core_Form {
 
             // Update the Contact Type for the Contact
             try {
-              \Civi\Api4\Contact::update()
+              Contact::update()
                                 ->addValue('contact_sub_type', $contactsubtypes)
                                 ->addWhere($identifier, '=', $row[0])
                                 ->addWhere('contact_type', '=', 'Individual')
