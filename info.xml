@@ -1,32 +1,39 @@
 <?xml version="1.0"?>
 <extension key="au.com.agileware.importcontactsubtype" type="module">
-    <file>importcontactsubtype</file>
-    <name>Import Contact Subtype</name>
-    <description>Provides feature to append multiple Contact Subtypes for a Contact when providing CSV text in the
+  <file>importcontactsubtype</file>
+  <name>Import Contact Subtype</name>
+  <description>Provides feature to append multiple Contact Subtypes for a Contact when providing CSV text in the
         format of either a) Contact ID, Contact Subtypes b) Contact External ID, Contact Subtypes.
     </description>
-    <license>AGPL-3.0</license>
-    <maintainer>
-        <author>Agileware</author>
-        <email>support@agileware.com.au</email>
-    </maintainer>
-    <urls>
-        <url desc="Main Extension Page">https://github.com/agileware/au.com.agileware.importcontactsubtype</url>
-        <url desc="Documentation">https://github.com/agileware/au.com.agileware.importcontactsubtype</url>
-        <url desc="Support">https://agileware.com.au/contact</url>
-        <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
-    </urls>
-    <releaseDate>2022-05-25</releaseDate>
-    <version>1.2</version>
-    <develStage>beta</develStage>
-    <compatibility>
-        <ver>5.0</ver>
-    </compatibility>
-    <comments></comments>
-    <classloader>
-        <psr4 prefix="Civi\" path="Civi"/>
-    </classloader>
-    <civix>
-        <namespace>CRM/Importcontactsubtype</namespace>
-    </civix>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Agileware</author>
+    <email>support@agileware.com.au</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/agileware/au.com.agileware.importcontactsubtype</url>
+    <url desc="Documentation">https://github.com/agileware/au.com.agileware.importcontactsubtype</url>
+    <url desc="Support">https://agileware.com.au/contact</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2022-05-25</releaseDate>
+  <version>1.2</version>
+  <develStage>beta</develStage>
+  <compatibility>
+    <ver>5.27</ver>
+  </compatibility>
+  <comments/>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+    <psr0 prefix="CRM_" path="."/>
+  </classloader>
+  <civix>
+    <namespace>CRM/Importcontactsubtype</namespace>
+    <format>25.01.1</format>
+  </civix>
+  <mixins>
+    <mixin>menu-xml@1.0.0</mixin>
+    <mixin>setting-php@1.0.0</mixin>
+    <mixin>smarty-v2@1.0.3</mixin>
+  </mixins>
 </extension>
